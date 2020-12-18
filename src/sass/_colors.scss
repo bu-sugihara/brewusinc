@@ -1,0 +1,24 @@
+$colors: (
+  red          : #f14130,
+  orange       : #fa8e01,
+  green        : #00b731,
+  blue         : #00aad4,
+  navy         : #16184e,
+  black        : #040a17,
+  darkGray     : #656565,
+  gray         : #b0b0b0,
+  lightGray    : #d8d8d8,
+  highLightGray: #e1e1e1,
+  whiteGray    : #f1f1f6,
+  white        : #ffffff,
+);
+
+// 背景カラー
+$bgColor: #a3ced9;
+
+// 影カラー
+$shadowColor: rgba(0, 0, 0, 0.8);
+
+@function colors($key) {
+  @return map-get($colors, $key);
+}

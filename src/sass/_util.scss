@@ -1,0 +1,26 @@
+$IMAGE_ROOT: '/assets/images';
+$ASSETS_ROOT: '/assets';
+@if $isGithub {
+  // $IMAGE_ROOT: '/hp/docs/assets/images';
+  // $ASSETS_ROOT: '/hp/docs/assets';
+  $IMAGE_ROOT: './assets/images';
+  $ASSETS_ROOT: './assets';
+}
+
+$contentArea: 1200px;
+// レイアウト幅
+$contentInner: 1000px;
+// ブレークポイント
+$breakpoints: (
+  "sp": "screen and (max-width: 749px)",
+  // "tab": "screen and (max-width: #{$contentInner - 1px})",
+  "pc": "screen and (min-width: 750px)",
+);
+
+// メディアクエリ
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+
+    @content;
+  }
+}

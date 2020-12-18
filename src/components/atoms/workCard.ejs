@@ -1,0 +1,67 @@
+<article
+  class="workCard <%= classname %>"
+>
+  <div class="workCard__bg">
+    <amp-img src="<%= d.bgImageUrl %>" width="700" height="758"></amp-img>
+  </div>
+
+  <div class="workCard__inner">
+    <section class="workCard__inner__content">
+      <h3><%= d.title %></h3>
+      <h4><%= d.companyName %></h4>
+
+      <dl>
+        <%
+          for (var i = 0; i < d.description.length; i++) {
+          const desc = d.description[i]
+        %>
+        <dd><%= desc %></dd>
+        <% } %>
+
+        <dt>使用技術</dt>
+        <dd>
+          <%= d.tech.join('、') %>
+        </dd>
+
+        <dt>対応範囲</dt>
+        <dd>
+          <span class="tag <%= d.isPlanning ? 'tag--active' : '' %>">企画</span>
+          <span class="tag <%= d.isSpecification ? 'tag--active' : '' %>">仕様設計</span>
+          <span class="tag <%= d.isDesign ? 'tag--active' : '' %>">デザイン</span>
+          <span class="tag <%= d.isRequirement ? 'tag--active' : '' %>">開発</span>
+          <span class="tag <%= d.isOperation ? 'tag--active' : '' %>">運用・改善</span>
+          <span class="tag <%= d.isIos ? 'tag--active' : '' %>">iOS</span>
+          <span class="tag <%= d.isAndroid ? 'tag--active' : '' %>">Android</span>
+          <span class="tag <%= d.isWeb ? 'tag--active' : '' %>">Web</span>
+        </dd>
+
+        <% if (d.iosUrl || d.androidUrl) { %>
+          <dd class="workCard__inner__content__app">
+            <% if (d.iosUrl) { %>
+            <a class="workCard__inner__content__app__btn" target=”_blank” href="<%= d.iosUrl %>"><img src="<%= IMAGE_ROOT %>/btn-apple_2@2x.png"></a>
+            <% } %>
+            <% if (d.androidUrl) { %>
+            <a class="workCard__inner__content__app__btn" target=”_blank” href="<%= d.androidUrl %>"><img src="<%= IMAGE_ROOT %>/btn-google_2@2x.png"></a>
+            <% } %>
+          </dd>
+        <% } %>
+
+        <% if (d.webUrl) { %>
+          <dd class="workCard__inner__content__web">
+            <a target="_blank" href="<%= d.webUrl %>"><%= d.webUrlName %></a>
+          </dd>
+        <% } %>
+      </dl>
+    </section>
+
+    <section class="workCard__inner__preview <%= d.pcImageUrl ? 'workCard__inner__preview--pc' : '' %>">
+      <amp-img width="<%= d.pcImageUrl ? 250 : 300 %>" height="<%= d.pcImageUrl ? 501 : 601 %>" src="<%= d.imageUrl %>" alt="<%= d.title %>"></amp-img>
+
+      <% if (d.pcImageUrl) { %>
+        <div class="workCard__inner__preview__pc">
+          <amp-img width="400" height="231" src="<%= d.pcImageUrl %>" alt="<%= d.title %>"></amp-img>
+        </div>
+      <% } %>
+    </section>
+  </div>
+</article>

@@ -1,0 +1,91 @@
+@import "sass/common.scss";
+
+#privacypolicy {
+  .content {
+    &--head {
+      padding-top: 100px;
+    }
+  }
+  .privacyList {
+    @include mq('pc') {
+      padding: 0 20px;
+    }
+
+    &__item {
+      margin-bottom: 100px;
+      > h3 {
+        font-family: "SourceHanSans-Medium";
+        font-size: 30px;
+        line-height: 50px;
+        margin-bottom: 60px;
+        color: #040a17;
+      }
+
+      > h4 {
+        font-family: "SourceHanSans-Medium";
+        font-size: 20px;
+        line-height: 36px;
+        margin-bottom: 30px;
+        color: #040a17;
+      }
+
+      font-size: 14px;
+      line-height: 30px;
+      color: #626262;
+
+      > p {
+        text-align: left;
+        margin-bottom: 30px;
+
+        &:last-child {
+          margin-bottom: 0px;
+        }
+      }
+
+      > ol {
+        padding-left: 20px;
+        margin-top: 30px;
+
+        &.privacyList__item__ol {
+          padding: 0;
+
+          > li {
+            list-style-type:none;
+            list-style-position:inside;
+            counter-increment: cnt;
+            margin-bottom: 0px;
+
+            &:before{
+              display: marker;
+              content: "(" counter(cnt) ") ";
+            }
+          }
+        }
+
+        > li {
+          margin-bottom: 30px;
+
+          &:last-child {
+            margin-bottom: 0px;
+          }
+
+          > ul {
+            margin-top: 30px;
+
+            li {
+              list-style: initial;
+              margin-left: 20px;
+            }
+
+            .listStyleNone {
+              list-style: none;
+              margin-left: 0px;
+            }
+
+          }
+        }
+      }
+
+    }
+  }
+}
