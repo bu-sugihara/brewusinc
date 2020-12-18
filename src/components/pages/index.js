@@ -66,14 +66,14 @@ function init() {
 
     tl.add('scene4')
 
-    tl.to('.intro__bg', { 'backgroundPositionX': `-100vw`, duration: 10, ease: Linear.easeNone, repeat: -1 })
+    // tl.to('.intro__bg', { 'backgroundPositionX': `-100vw`, duration: 10, ease: Linear.easeNone, repeat: -1 })
 
     tl.add('scene5')
 
-    tl.to('.intro__title__name1', { 'margin-left': '10%', opacity: 1 }, 'scene3')
-    tl.to('.intro__title__name2', { 'margin-left': '10%', opacity: 1 })
-    tl.to('.intro__title__name3', { 'margin-left': '10%', opacity: 1 })
-    tl.to('.intro__title__name4', { 'margin-left': '10%', opacity: 1, onComplete: () => {
+    tl.to('.intro__title__name1', { 'margin-left': Const.IS_SP ? '10%' : '15.7%', opacity: 1 }, 'scene3')
+    tl.to('.intro__title__name2', { 'margin-left': Const.IS_SP ? '10%' : '15.7%', opacity: 1 })
+    tl.to('.intro__title__name3', { 'margin-left': Const.IS_SP ? '10%' : '15.7%', opacity: 1 })
+    tl.to('.intro__title__name4', { 'margin-left': Const.IS_SP ? '10%' : '15.7%', opacity: 1, onComplete: () => {
       document.body.style.position = 'static'
       elm.classList.remove('animation')
     }})

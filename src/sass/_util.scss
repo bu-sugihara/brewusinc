@@ -7,9 +7,9 @@ $ASSETS_ROOT: '/assets';
   $ASSETS_ROOT: './assets';
 }
 
-$contentArea: 1200px;
+$contentArea: 1400px;
 // レイアウト幅
-$contentInner: 1000px;
+$contentInner: 960px;
 // ブレークポイント
 $breakpoints: (
   "sp": "screen and (max-width: 749px)",
