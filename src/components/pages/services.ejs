@@ -1,0 +1,214 @@
+<%
+const title = 'サービス｜スマホアプリ開発・UIUXデザイン・Web制作｜株式会社ブリューアス(Brewus,Inc.)';
+const gaPageTitle = 'services';
+const isIntroAnime = false;
+
+const pankuzuList = [
+  { label: 'Home', url: '/' },
+  { label: 'Services', url: '' }
+];
+
+const strengthList = [
+  { icon: 'qcd', title: 'QCD（品質・コスト・納期）を担保', desc: 'PM・UI／UXデザイナー・エンジニア・QAまで幅広い職種が在籍。社内で一貫して開発可能な体制構築を実現することで生産プロセスを向上。QCD（品質・コスト・納期）を担保いたします。' },
+  { icon: 'phase', title: 'フェーズを問わない豊富なサービス開発経験', desc: 'BtoBからBtoCまで幅広いビジネスモデルを通して、企画からUI／UXデザイン・開発・リリース後の改善まで、フェーズを問わない豊富な開発経験があります。' },
+  { icon: 'tech', title: '多様な技術力を活用した開発', desc: 'スマホアプリを中心にSNS・動画配信・フィンテック・EC・エンタメなど、様々な事業に対応できる多様な技術力を活用した開発が可能。「総合的な開発力」で、実績を積み上げています。' },
+];
+
+const recordList = [
+  { label: 'エンターテイメント', value: 11 },
+  { label: 'ソーシャルネットワーキング', value: 6 },
+  { label: 'ナビゲーション', value: 6 },
+  { label: 'ライフスタイル', value: 6 },
+  { label: 'ゲーム', alert: '2', value: 5 },
+  { label: 'ショッピング', value: 5 },
+  { label: '仕事効率化', value: 5 },
+  { label: 'ニュース', value: 4 },
+  { label: 'スポーツ', value: 3 },
+  { label: 'ビジネス', value: 3 },
+  { label: 'ファイナンス', value: 3 },
+  { label: 'フード／ドリンク', value: 3 },
+  { label: 'ユーティリティ', value: 3 },
+  { label: 'ヘルス&フィットネス', value: 2 },
+  { label: 'メディカル', value: 2 },
+  { label: '写真／ビデオ', value: 2 },
+  { label: 'ステッカー', value: 1 },
+  { label: 'ミュージック', value: 1 },
+  { label: 'キッズ', value: 1 },
+  { label: '旅行', value: 1 },
+  { label: '雑誌・新聞', value: 1 },
+  { label: 'その他カテゴリー', value: 0 },
+];
+
+var recordCnt = 0;
+
+for (var i = 0; i < recordList.length; i++) {
+  recordCnt += recordList[i].value
+}
+
+const categoryCnt = 25;
+const categoryCompCnt = 21;
+
+const categoryRate = Math.floor((categoryCompCnt / categoryCnt) * 100);
+
+
+const processList = [
+  { label: '企画／設計', title: '企画／設計', desc: '営業・PM（プロジェクトマネージャー）がご依頼内容をヒアリングし、お客様の目的に合わせた企画／戦略をご提案いたします。' },
+  { label: 'UI／UX設計', title: 'UI／UX設計・デザイン', desc: 'UI／UXデザイナーが機能要件・サイトマップを定義し、使い心地の良いシステム・ビジュアルをデザインいたします。'},
+  { label: '開発', title: '開発', desc: '開発実装をおこなうプログラマーがUI／UXデザイナーと連携しながら開発を進めていきます。' },
+  { label: '運用', title: '運用', desc: '開発・リリースするだけでなく、その後の運用もワンストップで対応いたします。' },
+  { label: '改良支援', title: '改良支援', desc: '集客などの改良支援もお任せください。現状の課題を解決すべく、職種を跨いで一丸となり、御社を支援いたします。' },
+];
+%>
+
+<% include /src/components/_head %>
+<main id="services">
+  <article>
+    <section class="content content--head">
+      <div class="content__bg"></div>
+      <div class="content__header content__header--services content__header--bg">
+        <div class="content__header__title">
+          <h2>Services</h2>
+        </div>
+      </div>
+      <div class="content__nav">
+        <nav>
+          <ol>
+            <%
+              for (var i = 0; i < pankuzuList.length; i++) {
+              const d = pankuzuList[i];
+            %>
+              <li>
+                <% if (d.url) { %><a href="<%= ROOT + d.url %>"><% } %>
+                  <%= d.label %>
+                <% if (d.url) { %></a><% } %>
+              </li>
+            <% } %>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <section class="strength content">
+      <div class="content__inner feedInTop" data-in-point="strength">
+        <h3>私たちの強み</h3>
+        <div class="strength__desc">
+          <ul class="strengthList">
+            <%
+              for (var i = 0; i < strengthList.length; i++) {
+                const d = strengthList[i]
+            %>
+              <li class="strengthList__item">
+                <div class="strengthList__item__icon">
+                  <span class="servicesIcon servicesIcon--<%= d.icon %>"></span>
+                </div>
+
+                <div class="strengthList__item__desc">
+                  <h4><%= d.title %></h4>
+                  <p><%= d.desc %></p>
+                </div>
+              </li>
+            <% } %>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="record content">
+      <div class="content__inner feedInTop" data-in-point="record">
+        <h3>幅広い領域での開発実績</h3>
+        <div class="record__desc">
+
+          <div class="record__desc__history">
+            <div class="recordListHead">
+              <div class="recordListHead__item">
+                <div class="recordListHead__item__desc">
+                  <h4>開発実績</h4>
+                  <p><span class="fs30">計</span><%= recordCnt %><span class="fs50">本</span></p>
+                </div>
+                <div class="recordListHead__item__icon">
+                  <span class="servicesIcon servicesIcon--rate"></span>
+                </div>
+              </div>
+
+              <div class="recordListHead__item">
+                <div class="recordListHead__item__desc">
+                  <h4>AppStoreカテゴリーにて</h4>
+                  <p><%= categoryRate %><span class="fs50">%</span><span class="fs30">を網羅</span><span class="alertText">(※1)</span></p>
+                </div>
+                <div class="recordListHead__item__icon">
+                  <span class="servicesIcon servicesIcon--app"></span>
+                </div>
+              </div>
+            </div>
+
+            <ul class="recordList">
+              <%
+                for (var i = 0; i < recordList.length; i++) {
+                const d = recordList[i];
+              %>
+                <li class="recordList__item">
+                  <p class="<%= d.label == 'ソーシャルネットワーキング' ? ' fs12' : '' %>"><%= d.label %><% if (d.alert) { %><span class="alertText">(※<%= d.alert %>)</span><% } %></p><span><%= d.value %>本</span>
+                </li>
+              <% } %>
+            </ul>
+          </div>
+
+          <div class="record__desc__alert">
+            <p>※2020年3月時点</p>
+            <p>(※1)Apple Inc.のApp Storeカテゴリー全25領域中21領域への開発実績</p>
+            <p>(※2)ブリューアスに継承対象となった案件のみ計上</p>
+          </div>
+
+          <div class="record__desc__client">
+            <img src="<%= IMAGE_ROOT %>/services/client.png">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process content">
+      <div class="content__inner feedInTop" data-in-point="process">
+        <h3>制作の流れ</h3>
+
+        <div class="process__desc">
+          <ol class="processList">
+            <%
+              for (var i = 0; i < processList.length; i++) {
+              const d = processList[i];
+            %>
+              <li class="processList__item">
+                <h4><span>Step<%= i + 1 %></span><%= d.title %></h4>
+                <p><%= d.desc %></p>
+              </li>
+            <% } %>
+          </ol>
+
+          <div class="process__desc__step">
+            <ol class="processStepList">
+              <%
+                for (var i = 0; i < processList.length; i++) {
+                const d = processList[i];
+              %>
+                <li class="processStepList__item processArrow<%= (i + 1) == processList.length ? ' processArrow--s' : '' %>">
+                  <span>Step<%= i + 1 %></span>
+                  <p><%= d.label %></p>
+                </li>
+              <% } %>
+              <li class="processArrow processArrow--w"></li>
+              <li class="processArrow processArrow--w"></li>
+            </ol>
+          </div>
+
+          <div class="process__desc__quality">
+            <div class="process__desc__quality__content processArrow">
+              <p>品質管理</p>
+            </div>
+            <div class="processArrow processArrow--w"></div>
+            <div class="processArrow processArrow--w"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+</main>
+<% include /src/components/_foot %>

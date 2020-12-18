@@ -1,0 +1,23 @@
+<ul class="<%= navClassname %>">
+  <%
+    for (var i = 0; i < navList.length; i++) {
+    const item = navList[i]
+  %>
+    <li class="nav__item" data-target-id="<%= item.id %>">
+      <% // contactのみ計測
+        if (item.type === 'button') { %>
+        <a
+          class="gaEvent btn"
+          href="<%= item.href %>"
+          data-action-name="contact_form"
+          data-page-title="<%= gaPageTitle %>"
+          data-label-name="navi"
+        >
+      <%  } else { %>
+        <a href="<%= item.href %>">
+      <% } %>
+        <span><%= item.label %></span>
+      </a>
+    </li>
+  <% } %>
+</ul>

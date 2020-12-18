@@ -1,0 +1,76 @@
+.nav {
+  display: flex;
+
+  &__item {
+    text-align: center;
+
+    a {
+      display: block;
+
+      span {
+        position: relative;
+        width: 100%;
+        height: 65px;
+        font-size: 18px;
+        font-weight: 500;
+        display: block;
+        color: colors(black);
+        // background-color: colors(white);
+        font-family: "Heebo-Bold";
+        line-height: 60px;
+        letter-spacing: 0.9px;
+      }
+    }
+  }
+}
+
+// PC
+@include mq('pc') {
+  .nav {
+    &__item {
+      min-width: 120px;
+      height: 65px;
+
+      .btn {
+        width: 200px;
+        height: 65px;
+        min-width: unset;
+        max-width: unset;
+
+        span {
+          color: #fff;
+        }
+      }
+
+      a:not(.btn) {
+        span {
+          &::before {
+            content: "";
+            position: absolute;
+            width: 60%;
+            height: 2px;
+            bottom: 8px;
+            left: 20%;
+            background-color: #38567f;
+            transform: scale(0, 1);
+            transform-origin: left top;
+            transition: transform .4s cubic-bezier(1, 0, 0, 1);
+          }
+
+          &:hover {
+            color: #38567f;
+
+            &::before {
+              // transform-origin: left top;
+              transform: scale(1,1)
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// SP
+@include mq('sp') {
+}

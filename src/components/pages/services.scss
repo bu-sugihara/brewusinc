@@ -1,0 +1,594 @@
+@import "sass/common.scss";
+
+#services {
+  h4 {
+    font-size: 20px;
+    font-family: "SourceHanSans-Medium";
+    line-height: 30px;
+    color: #221815;
+
+    @include mq('sp') {
+      font-size: 16px;
+    }
+  }
+
+  ol {
+    list-style: none;
+    padding: 0;
+  }
+
+  .fs12 {
+    font-size: 12px!important;
+  }
+  .fs30 {
+    font-size: 30px;
+  }
+  .fs50 {
+    font-size: 50px;
+  }
+
+  .servicesIcon {
+    position: relative;
+    display: block;
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    background-color: #f7f8f8;
+
+    @include mq('sp') {
+      width: 100px;
+      height: 100px;
+    }
+
+    &::after {
+      position: absolute;
+      top: 25px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      content: "";
+      width: 75px;
+      height: 75px;
+      background-image: url($IMAGE_ROOT + '/services/strength-icon.png');
+      background-size: 75px;
+      background-repeat: no-repeat;
+
+      @include mq('sp') {
+        width: 60px;
+        height: 60px;
+        top: 20px;
+        background-image: url($IMAGE_ROOT + '/services/strength-icon_sp.png');
+        background-size: 60px;
+      }
+    }
+
+    &--qcd {
+      &::after {
+        background-position-y: 0;
+      }
+    }
+
+    &--phase {
+      &::after {
+        background-position-y: -75px;
+        @include mq('sp') {
+          background-position-y: -60px;
+        }
+      }
+    }
+
+    &--tech {
+      &::after {
+        background-position-y: -150px;
+        @include mq('sp') {
+          background-position-y: -120px;
+        }
+      }
+    }
+
+    &--app {
+      &::after {
+        background-position-y: -225px;
+        @include mq('sp') {
+          background-position-y: -180px;
+        }
+      }
+    }
+
+    &--rate {
+      &::after {
+        background-position-y: -300px;
+        @include mq('sp') {
+          background-position-y: -240px;
+        }
+      }
+    }
+  }
+
+  .strength {
+    &__desc {
+      .strengthList {
+        &__item {
+          display: flex;
+          margin-bottom: 100px;
+
+          @include mq('sp') {
+            justify-content: center;
+            flex-direction: column;
+            margin-bottom: 50px;
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          &__icon {
+            @include mq('sp') {
+              .servicesIcon {
+                margin: 0 auto 40px;
+              }
+            }
+          }
+
+          &__desc {
+            @include mq('pc') {
+              padding-left: 55px;
+            }
+
+            h4 {
+              margin-bottom: 30px;
+
+              @include mq('sp') {
+                text-align: center;
+              }
+            }
+
+            p {
+              text-align: left;
+
+              @include mq('sp') {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+  } // strength
+
+  .alertText {
+    font-size: 12px;
+    color: colors(black);
+    padding: 0 8px;
+  }
+
+  .record {
+    &__desc {
+      &__history {
+        .recordListHead {
+          display: flex;
+
+          @include mq('sp') {
+            flex-direction: column;
+          }
+
+          &__item {
+            width: 50%;
+            padding: 0 16px;
+            display: flex;
+
+            @include mq('sp') {
+              width: 100%;
+              margin: 0 auto;
+              padding: 0;
+
+              &:first-of-type {
+                margin-bottom: 30px;
+              }
+            }
+
+            &__desc {
+              width: 100%;
+              margin-right: 32px;
+
+              @include mq('sp') {
+                margin-right: 8px;
+              }
+
+              p {
+                position: relative;
+                text-align: left;
+                font-size: 80px;
+                color: colors(black);
+                line-height: 100px;
+                font-weight: 500;
+                font-family: "SourceHanSans-Medium";
+                letter-spacing: 3px;
+
+                @include mq('sp') {
+                  font-size: 60px;
+                }
+
+                span {
+                  font-weight: normal;
+                }
+
+                .alertText {
+                  position: absolute;
+                  top: 16px;
+                  left: 100px;
+                  line-height: normal;
+                  font-weight: 500;
+
+                  @include mq('sp') {
+                    left: 70px;
+                  }
+                }
+              }
+            }
+
+            &__icon {
+              width: 125px;
+            }
+          }
+        } // recordListHead
+
+        .recordList {
+          display: flex;
+          flex-wrap: wrap;
+          background-color: #f7f8f8;
+          margin-top: 30px;
+
+          @include mq('sp') {
+            align-items: center;
+          }
+
+          &__item {
+            display: flex;
+            width: 25%;
+            height: 60px;
+            padding: 0 20px;
+            border: 0.5px solid #fff;
+            align-items: center;
+
+            @include mq('sp') {
+              width: 50%;
+              height: 32px;
+              padding: 0 8px;
+            }
+
+            p {
+              font-size: 14px;
+              letter-spacing: 0.28px;
+              color: colors(black);
+              text-align: left;
+              // line-height: 60px;
+
+              @include mq('sp') {
+                font-size: 10px!important;
+                letter-spacing: 0.2px;
+                // line-height: 32px;
+              }
+            }
+
+            > span {
+              // line-height: 60px;
+              font-size: 16px;
+              font-family: "SourceHanSans-Medium";
+              color: #38567f;
+              margin-left: auto;
+
+              @include mq('pc') {
+                width: 32px;
+              }
+
+
+              @include mq('sp') {
+                font-size: 10px;
+                // line-height: 32px;
+              }
+            }
+
+            // &__alert {
+            //   font-size: 12px;
+            //   color: colors(black);
+            // }
+          }
+        }
+      }
+
+      // 2020年3月...
+      &__alert {
+        margin-top: 10px;
+
+        @include mq('pc') {
+          margin-top: 20px;
+          padding: 0 20px;
+        }
+
+        p {
+          color: #040a17;
+          text-align: right;
+          font-size: 12px;
+          line-height: 25px;
+
+          @include mq('sp') {
+            font-size: 10px;
+          }
+        }
+      }
+
+      &__client {
+        margin-top: 60px;
+
+        @include mq('sp') {
+          margin-top: 20px;
+        }
+      }
+    } // desc
+  } // record
+
+  .processArrow {
+    width: 180px;
+    height: 50px;
+    background-color: #eeefef;
+    position: relative;
+    overflow: hidden;
+
+    // タブレット対応
+    @include mq('sp') {
+      width: 60px;
+      height: 40px;
+    }
+
+    @media screen and (max-width: 560px) {
+      width: 30px;
+      height: 30px;
+    }
+
+    &::after,
+    &::before {
+      position: absolute;
+      bottom: 0px;
+      content: "";
+      left: -60px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 50px 150px 0 150px;
+      border-color: #ffffff transparent transparent transparent;
+      z-index: 10;
+
+      // タブレット対応
+      @include mq('sp') {
+        left: -50px;
+        border-width: 80px 80px 0 80px;
+      }
+
+      @media screen and (max-width: 560px) {
+        left: -65px;
+        border-width: 80px 80px 0 80px;
+      }
+    }
+
+    &::after {
+      bottom: 20px;
+      border-color: #eeefef transparent transparent transparent;
+
+      @include mq('sp') {
+        bottom: 10px;
+      }
+    }
+
+    &:last-child {
+      &::before {
+        border-color: #ffffff #ffffff transparent #ffffff;
+      }
+    }
+
+    // ちょっと無理やり
+    &--s {
+      background: linear-gradient(180deg, #eeefef 0px, #eeefef 150px, #f7f8f8 150px, #f7f8f8 180px);
+    }
+
+    &--w {
+      background-color: #f7f8f8;
+
+      &::after {
+        border-color: #f7f8f8 transparent transparent transparent;
+      }
+    }
+  }
+
+  .process {
+    &__desc {
+      display: flex;
+
+      .processList {
+        margin-right: 60px;
+
+        @include mq('sp') {
+          margin-right: 20px;
+        }
+
+        &__item {
+          width: 100%;
+          height: 170px;
+          border-bottom: 2px solid #eeefef;
+          margin-top: 32px;
+
+          @include mq('sp') {
+            height: 200px;
+          }
+
+          &:first-of-type {
+            height: 150px;
+            margin-top: 0;
+
+            @include mq('sp') {
+              height: 200px;
+            }
+          }
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          h4 {
+            font-size: 20px;
+            line-height: 60px;
+            color: #221815;
+            font-size: "SourceHanSans-Medium";
+            font-weight: 500;
+
+            @include mq('sp') {
+              line-height: normal;
+              font-size: 16px;
+              margin-bottom: 20px;
+            }
+
+            > span {
+              font-size: 20px;
+              letter-spacing: 1px;
+              color: #040a17;
+              font-family: "Heebo-Bold";
+              margin-right: 16px;
+
+              @include mq('sp') {
+                display: block;
+                font-size: 16px;
+              }
+            }
+          }
+
+          p {
+            text-align: left;
+
+            @include mq('sp') {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+
+      &__step {
+        // width: 180px;
+        margin-right: 40px;
+        flex: none;
+
+        @include mq('sp') {
+          // width: 50px;
+          margin-right: 8px;
+        }
+
+        .processStepList {
+          padding: 0;
+
+          &__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 200px;
+
+            @include mq('sp') {
+              height: 230px;
+              padding-top: 40px;
+            }
+
+            @media screen and (max-width: 560px) {
+              height: 230px;
+              padding-top: 50px;
+            }
+
+            > span {
+              display: block;
+              width: 100px;
+              height: 30px;
+              margin: 40px auto 20px;
+              border-radius: 15px;
+              background-color: colors(white);
+              text-align: center;
+              line-height: 30px;
+              font-size: 20px;
+              font-family: "Heebo-Bold";
+              letter-spacing: 1px;
+
+              @include mq('sp') {
+                display: none;
+                // width: 80px;
+                // font-size: 16px;
+              }
+            }
+
+            > p {
+              font-size: 20px;
+              line-height: 30px;
+              color: #221815;
+              font-size: "SourceHanSans-Medium";
+              font-weight: 500;
+
+              @include mq('sp') {
+                font-size: 12px;
+                writing-mode: vertical-rl;
+                text-orientation: upright;
+                letter-spacing: 3.2px;
+              }
+
+              @media screen and (max-width: 560px) {
+                font-size: 10px;
+                writing-mode: vertical-rl;
+                text-orientation: upright;
+                letter-spacing: 3.2px;
+              }
+            }
+          }
+        }
+      } // step
+
+      &__quality {
+        // width: 180px;
+        // height: 100%;
+        background-color: #eeefef;
+        position: relative;
+        flex: none;
+
+        @include mq('sp') {
+          // width: 50px;
+        }
+
+        &__content {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 1000px;
+          background: linear-gradient(180deg, #eeefef 0px, #eeefef 970px, #f7f8f8 970px, #f7f8f8 1000px);
+
+          @include mq('sp') {
+            height: 1150px;
+            background: linear-gradient(180deg, #eeefef 0px, #eeefef 1120px, #f7f8f8 1120px, #f7f8f8 1150px);
+          }
+
+          p {
+            font-size: 20px;
+            line-height: 30px;
+            color: #221815;
+            font-size: "SourceHanSans-Medium";
+            font-weight: 500;
+
+            @include mq('sp') {
+              font-size: 14px;
+              letter-spacing: 3.2px;
+              writing-mode: vertical-rl;
+            }
+
+            @media screen and (max-width: 560px) {
+              font-size: 10px;
+              letter-spacing: 3.2px;
+              writing-mode: vertical-rl;
+            }
+          }
+        }
+      }
+    }
+  }
+}
