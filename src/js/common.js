@@ -142,12 +142,12 @@ export const init = () => {
   const pTop = document.getElementsByClassName('pTop')[0]
 
   let isHeaderOut = false
-  // footerサイズ
-  const FOOTER_HEIGHT = 190
   // const PAGETOP_HEIGHT = Const.IS_SP ? 50 : 75
   const PAGETOP_HEIGHT = 75
 
   window.addEventListener('scroll', (e) => {
+    // footerサイズ
+    const FOOTER_HEIGHT = Const.IS_SP ? 632 : 190
     // window幅
     const wh = window.innerHeight || document.documentElement.clientHeight || 0
     // body幅
