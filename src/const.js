@@ -9,7 +9,7 @@ class Const {
     return [
       { id: 'intro', label: 'Home', href: '/' },
       { id: 'services', label: 'Services', href: '/#services' },
-      { id: 'work', label: 'Work', href: '/#work' },
+      { id: 'developer', label: 'Developer', href: '/#developer' },
       { id: 'company', label: 'Company', href: '/company' },
       { id: 'contact', label: 'Contact', href: '/#contact' },
     ]

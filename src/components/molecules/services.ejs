@@ -5,7 +5,7 @@
     <p>スマートフォンアプリを中心に、SNS・動画配信・フィンテック・EC・エンタメなど、貴社の想像するあらゆる価値創造、サービス開発をサポートします。</p>
 
     <div class="services__content__more">
-      <a href="<%= ROOT + '/services' %>">More</a>
+      <a href="<%= process.env.NODE_ENV == 'development' ? ROOT + '/services.html' : ROOT + '/services' %>">More</a>
     </div>
   </div>
 

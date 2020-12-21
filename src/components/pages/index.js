@@ -66,7 +66,7 @@ function init() {
 
     tl.add('scene4')
 
-    // tl.to('.intro__bg', { 'backgroundPositionX': `-100vw`, duration: 10, ease: Linear.easeNone, repeat: -1 })
+    tl.to('.intro__bg', { 'backgroundPositionX': `-100vw`, duration: 10, ease: Linear.easeNone, repeat: -1 })
 
     tl.add('scene5')
 
