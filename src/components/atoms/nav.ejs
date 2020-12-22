@@ -16,7 +16,14 @@
       <%  } else { %>
         <a href="<%= item.href %>">
       <% } %>
-        <span><%= item.label %></span>
+        <span>
+          <%= item.label %>
+          <% if (item.jp != '') { %>
+          <i>
+            <%= item.jp %>
+          </i>
+          <% } %>
+        </span>
       </a>
     </li>
   <% } %>

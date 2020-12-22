@@ -9,6 +9,7 @@
       justify-content: center;
       align-items: center;
       height: 75px;
+      flex-direction: column;
 
       span {
         position: relative;
@@ -16,13 +17,29 @@
         // height: 75px;
         font-size: 18px;
         font-weight: 500;
-        display: block;
+        display: flex;
+        flex-direction: column;
         color: colors(black);
         // background-color: colors(white);
         font-family: "Heebo-Bold";
         line-height: 60px;
         letter-spacing: 0.9px;
+        color: #40648c;
+        
+        i {
+          font-size: 12px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1;
+          letter-spacing: 0.6px;
+          text-align: center;
+          color: #626262;
+          position: relative;
+          top: -10px;
+        }
       }
+
     }
   }
 }
@@ -52,7 +69,7 @@
             position: absolute;
             width: 60%;
             height: 2px;
-            bottom: 8px;
+            bottom: 28px;
             left: 20%;
             background-color: #38567f;
             transform: scale(0, 1);
