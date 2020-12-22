@@ -2,6 +2,7 @@
 const title = 'サービス｜スマホアプリ開発・UIUXデザイン・Web制作｜株式会社ブリューアス(Brewus,Inc.)';
 const gaPageTitle = 'services';
 const isIntroAnime = false;
+const IMAGE_SERVICES = IMAGE_ROOT + '/services/'
 
 const pankuzuList = [
   { label: 'Home', url: '/' },
@@ -9,34 +10,35 @@ const pankuzuList = [
 ];
 
 const strengthList = [
-  { icon: 'qcd', title: 'QCD（品質・コスト・納期）を担保', desc: 'PM・UI／UXデザイナー・エンジニア・QAまで幅広い職種が在籍。社内で一貫して開発可能な体制構築を実現することで生産プロセスを向上。QCD（品質・コスト・納期）を担保いたします。' },
-  { icon: 'phase', title: 'フェーズを問わない豊富なサービス開発経験', desc: 'BtoBからBtoCまで幅広いビジネスモデルを通して、企画からUI／UXデザイン・開発・リリース後の改善まで、フェーズを問わない豊富な開発経験があります。' },
-  { icon: 'tech', title: '多様な技術力を活用した開発', desc: 'スマホアプリを中心にSNS・動画配信・フィンテック・EC・エンタメなど、様々な事業に対応できる多様な技術力を活用した開発が可能。「総合的な開発力」で、実績を積み上げています。' },
+  { icon: 'qcd', title: 'QCD（品質・コスト・納期）を担保', desc: 'PM・UI／UXデザイナー・エンジニア・QAまで幅広い職種が在籍。社内で一貫して開発可能な体制構築を実現することで生産プロセスを向上。QCD（品質・コスト・納期）を担保いたします。', header: '品質' },
+  { icon: 'phase', title: 'フェーズを問わない豊富なサービス開発経験', desc: 'BtoBからBtoCまで幅広いビジネスモデルを通して、企画からUI／UXデザイン・開発・リリース後の改善まで、フェーズを問わない豊富な開発経験があります。', header: '経験' },
+  { icon: 'tech', title: '多様な技術力を活用した開発', desc: 'スマホアプリを中心にSNS・動画配信・フィンテック・EC・エンタメなど、様々な事業に対応できる多様な技術力を活用した開発が可能。「総合的な開発力」で、実績を積み上げています。', header: '技術' },
+  { icon: 'dx', title: '業務連携を活かした幅広いニーズに応えられるDX支援', desc: '最新のデジタル技術を用いたデジタルビジネス改革推進を行うだけではなく、グループ会社・他者とも連携することで、IT面での支援を含めた新規事業開発サービスの一括提供が可能となります。', header: 'DX' },
 ];
 
 const recordList = [
-  { label: 'エンターテイメント', value: 11 },
-  { label: 'ソーシャルネットワーキング', value: 6 },
-  { label: 'ナビゲーション', value: 6 },
-  { label: 'ライフスタイル', value: 6 },
-  { label: 'ゲーム', alert: '2', value: 5 },
-  { label: 'ショッピング', value: 5 },
-  { label: '仕事効率化', value: 5 },
-  { label: 'ニュース', value: 4 },
-  { label: 'スポーツ', value: 3 },
-  { label: 'ビジネス', value: 3 },
-  { label: 'ファイナンス', value: 3 },
-  { label: 'フード／ドリンク', value: 3 },
-  { label: 'ユーティリティ', value: 3 },
-  { label: 'ヘルス&フィットネス', value: 2 },
-  { label: 'メディカル', value: 2 },
-  { label: '写真／ビデオ', value: 2 },
-  { label: 'ステッカー', value: 1 },
-  { label: 'ミュージック', value: 1 },
-  { label: 'キッズ', value: 1 },
-  { label: '旅行', value: 1 },
-  { label: '雑誌・新聞', value: 1 },
-  { label: 'その他カテゴリー', value: 0 },
+  { label: 'エンターテイメント', value: 11, icon: IMAGE_SERVICES + 'JamGift.svg' },
+  { label: 'ソーシャルネットワーキング', value: 6, icon: IMAGE_SERVICES + 'JamInstagram.svg' },
+  { label: 'ナビゲーション', value: 6, icon: IMAGE_SERVICES + 'JamMapMarkerF.svg' },
+  { label: 'ライフスタイル', value: 6, icon: IMAGE_SERVICES + 'JamLeaf.svg' },
+  { label: 'ゲーム', alert: '2', value: 5, icon: IMAGE_SERVICES + 'JamGamepadF.svg' },
+  { label: 'ショッピング', value: 5, icon: IMAGE_SERVICES + 'JamShoppingCart.svg' },
+  { label: '仕事効率化', value: 5, icon: IMAGE_SERVICES + 'icon_box_tools.svg' },
+  { label: 'ニュース', value: 4, icon: IMAGE_SERVICES + 'JamTaskList.svg' },
+  { label: 'スポーツ', value: 3, icon: IMAGE_SERVICES + 'JamBasketball.svg' },
+  { label: 'ビジネス', value: 3, icon: IMAGE_SERVICES + 'JamBuildingF.svg' },
+  { label: 'ファイナンス', value: 3, icon: IMAGE_SERVICES + 'JamCreditCard.svg' },
+  { label: 'フード・ドリンク', value: 3, icon: IMAGE_SERVICES + 'JamPizzaSlice.svg' },
+  { label: 'ユーティリティ', value: 3, icon: IMAGE_SERVICES + 'JamTools.svg' },
+  { label: 'ヘルスケア', value: 2, icon: IMAGE_SERVICES + 'JamActivity.svg' },
+  { label: 'メディカル', value: 2, icon: IMAGE_SERVICES + 'JamMedical.svg' },
+  { label: '写真・ビデオ', value: 2, icon: IMAGE_SERVICES + 'JamCameraF.svg' },
+  // { label: 'ステッカー', value: 1, icon: IMAGE_SERVICES + 'JamGift.svg' },
+  { label: 'ミュージック', value: 1, icon: IMAGE_SERVICES + 'JamHeadsetF.svg' },
+  { label: 'キッズ', value: 1, icon: IMAGE_SERVICES + 'JamRocket.svg' },
+  { label: '旅行', value: 1, icon: IMAGE_SERVICES + 'JamPlaneF.svg' },
+  { label: '雑誌・新聞', value: 1, icon: IMAGE_SERVICES + 'JamNewspaperF.svg' },
+  { label: 'その他カテゴリー', value: 1, icon: IMAGE_SERVICES + 'JamPlaneF.svg' },
 ];
 
 var recordCnt = 0;
@@ -50,6 +52,24 @@ const categoryCompCnt = 21;
 
 const categoryRate = Math.floor((categoryCompCnt / categoryCnt) * 100);
 
+const images = [
+  {
+    pc: IMAGE_SERVICES + 'bg_pc_quality.png',
+    sp : IMAGE_SERVICES + 'img_sp_quality@2x.png'
+  },
+  {
+    pc: IMAGE_SERVICES + 'bg_pc_experiences.png',
+    sp : IMAGE_SERVICES + 'img_sp_experience@2x.png'
+  },
+  {
+    pc: IMAGE_SERVICES + 'bg_pc_tecnic.png',
+    sp : IMAGE_SERVICES + 'img_sp_tecnic@2x.png'
+  },
+  {
+    pc: IMAGE_SERVICES + 'img_pc_dx.png',
+    sp : IMAGE_SERVICES + 'img_sp_dx@2x.png'
+  }
+]
 
 const processList = [
   { label: '企画／設計', title: '企画／設計', desc: '営業・PM（プロジェクトマネージャー）がご依頼内容をヒアリングし、お客様の目的に合わせた企画／戦略をご提案いたします。' },
@@ -58,6 +78,38 @@ const processList = [
   { label: '運用', title: '運用', desc: '開発・リリースするだけでなく、その後の運用もワンストップで対応いたします。' },
   { label: '改良支援', title: '改良支援', desc: '集客などの改良支援もお任せください。現状の課題を解決すべく、職種を跨いで一丸となり、御社を支援いたします。' },
 ];
+
+// 職業
+const profession = [
+  { label: 'PMO／CTO室', desc: '会社全体のプロジェクトの進行管理や技術管理を行い、全ての案件が円滑かつクオリティが担保できるようにコントロールします' },
+  { label: 'プロジェクトマネージャー', desc: '高い開発知識と経験を持って、プロジェクトの取りまとめを行いチーム全体のハンドリングを行います' },
+  { label: 'UI・UXデザイナー', desc: 'サービスのクオリティを担保し、使い心地の良いサービス画面設計、デザインを行います' },
+  { label: 'Webエンジニア', desc: '高い技術力で最新のweb技術を駆使しながらwebの開発を行います' },
+  { label: 'iOS／Androidエンジニア', desc: '安定した動きと品質を担保しながらご要望に合わせたアプリ開発を行います' },
+  { label: 'Server', desc: 'テストテストテストテストテストテスト' },
+  { label: 'インフラエンジニア', desc: 'テストテストテストテストテストテスト' },
+  { label: 'QA', desc: '開発したサービスのクオリティチェックやバグ発見を行い、高いクオリティに保つためのテストなどを行います' },
+]
+
+// tool image
+const toolImages = [
+  {
+    pc: IMAGE_SERVICES + 'img_tool_group_1.png',
+    sp: IMAGE_SERVICES + 'img_tool_group_1@2x.png',
+  },
+  {
+    pc: IMAGE_SERVICES + 'img_tool_group_2.png',
+    sp: IMAGE_SERVICES + 'img_tool_group_2@2x.png',
+  },
+  {
+    pc: IMAGE_SERVICES + 'img_tool_group_3.png',
+    sp: IMAGE_SERVICES + 'img_tool_group_3@2x.png',
+  },
+  {
+    pc: IMAGE_SERVICES + 'img_tool_group_4.png',
+    sp: IMAGE_SERVICES + 'img_tool_group_4@2x.png',
+  },
+]
 %>
 
 <% include /src/components/_head %>
@@ -89,7 +141,7 @@ const processList = [
     </section>
 
     <section class="strength content">
-      <div class="content__inner feedInTop" data-in-point="strength">
+      <div class="content__innerNoMax feedInTop" data-in-point="strength">
         <h3>私たちの強み</h3>
         <div class="strength__desc">
           <ul class="strengthList">
@@ -98,23 +150,44 @@ const processList = [
                 const d = strengthList[i]
             %>
               <li class="strengthList__item">
-                <div class="strengthList__item__icon">
-                  <span class="servicesIcon servicesIcon--<%= d.icon %>"></span>
+                <div class="strengthList__item__image">
+                  <img src="<%= images[i].pc %>" srcset="<%= images[i].pc %> 1x, <%= images[i].sp %> 2x" />
                 </div>
+                <div class="strengthList__item__inner" style="background-image: url(<%= images[i].pc %>)">
+                  <div class="strengthList__item__inner__up">
+                    <div class="strengthList__item__inner__up__icon">
+                      <span class="servicesIcon servicesIcon--<%= d.icon %>"></span>
+                    </div>
+                    <h4>
+                      <%= d.header %>
+                      <% if (i == strengthList.length - 1) { %><span>※1</span><% } %>
+                    </h4>
+                  </div>
 
-                <div class="strengthList__item__desc">
-                  <h4><%= d.title %></h4>
-                  <p><%= d.desc %></p>
+
+                  <div class="strengthList__item__inner__desc">
+                    <h4><%= d.title %></h4>
+                    <p><%= d.desc %></p>
+                  </div>
                 </div>
               </li>
             <% } %>
           </ul>
         </div>
+        <div class="aten">
+          <p>※１：デジタルトランスフォーメーション（DX）</p>
+          <p>企業がビジネス環境の激しい変化に対応し、データとデジタル技術を活用して、顧客や社会のニーズを基に、製品やサービス、ビジネスモデルを変革するとともに、</p>
+          <p>業務そのものや、組織、プロセス、企業文化・風土を変革し、競争上の優位性を確立すること。</p>
+        <p>出典：
+        <a href="https://www.meti.go.jp/press/2019/07/20190731003/20190731003-1.pdf">
+          経済産業省「DX 推進指標」とそのガイダンスhttps://www.meti.go.jp/press/2019/07/20190731003/20190731003-1.pdf
+        </a></p>
+        </div>
       </div>
     </section>
 
     <section class="record content">
-      <div class="content__inner feedInTop" data-in-point="record">
+      <div class="content__innerNoMax feedInTop" data-in-point="record">
         <h3>幅広い領域での開発実績</h3>
         <div class="record__desc">
 
@@ -122,21 +195,19 @@ const processList = [
             <div class="recordListHead">
               <div class="recordListHead__item">
                 <div class="recordListHead__item__desc">
-                  <h4>開発実績</h4>
+                  <div class="recordListHead__item__desc__icon">
+                    <img src="<%= IMAGE_ROOT %>/services/icon_phone@2x.png" />
+                  </div>
+                  <h4>スマートフォンアプリ<br/>開発実績</h4>
                   <p><span class="fs30">計</span><%= recordCnt %><span class="fs50">本</span></p>
-                </div>
-                <div class="recordListHead__item__icon">
-                  <span class="servicesIcon servicesIcon--rate"></span>
                 </div>
               </div>
 
               <div class="recordListHead__item">
+                <div class="recordListHead__item__desc84"></div>
                 <div class="recordListHead__item__desc">
                   <h4>AppStoreカテゴリーにて</h4>
                   <p><%= categoryRate %><span class="fs50">%</span><span class="fs30">を網羅</span><span class="alertText">(※1)</span></p>
-                </div>
-                <div class="recordListHead__item__icon">
-                  <span class="servicesIcon servicesIcon--app"></span>
                 </div>
               </div>
             </div>
@@ -147,7 +218,16 @@ const processList = [
                 const d = recordList[i];
               %>
                 <li class="recordList__item">
-                  <p class="<%= d.label == 'ソーシャルネットワーキング' ? ' fs12' : '' %>"><%= d.label %><% if (d.alert) { %><span class="alertText">(※<%= d.alert %>)</span><% } %></p><span><%= d.value %>本</span>
+                  <div class="recordList__item__icon">
+                    <img src="<%= d.icon %>" />
+                  </div>
+                  <p class="<%= d.label == 'ソーシャルネットワーキング' ? ' fs12' : '' %>">
+                    <%= d.label %>
+                    <% if (d.alert) { %>
+                      <span class="alertText">(※<%= d.alert %>)</span>
+                    <% } %>
+                  </p>
+                  <span><%= d.value %>本</span>
                 </li>
               <% } %>
             </ul>
@@ -160,9 +240,54 @@ const processList = [
           </div>
 
           <div class="record__desc__client">
-            <img src="<%= IMAGE_ROOT %>/services/client.png">
+            <h3>取引実績</h3>
+            <div class="record__desc__client__image">
+              <img src="<%= IMAGE_ROOT %>/services/client.png">
+            </div>
           </div>
+
         </div>
+      </div>
+    </section>
+
+    <section class="job content">
+      <div class="content__innerNoMax feedInTop" data-in-point="job">
+        <h3>技術・職種</h3>
+
+        <div class="job__desc">
+          <ul>
+            <%
+              for (var i = 0; i < profession.length; i++) {
+              const d = profession[i]
+            %>
+              <li>
+                <h4>
+                  <%= d.label %>
+                </h4>
+                <p>
+                  <%= d.desc %>
+                </p>
+              </li>
+            <% } %>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="tool content">
+      <div class="content__innerNoMax feedInTop" data-in-point="tool">
+        <h3>ツール</h3>
+
+        <ul>
+          <%
+            for (var i = 0; i < toolImages.length; i++) {
+            const d = toolImages[i]
+          %>
+            <li>
+              <img src="<%= d.pc %>" srcset="<%= d.pc %> 1x, <%= d.sp %> 2x" />
+            </li>
+          <% } %>
+        </ul>
       </div>
     </section>
 

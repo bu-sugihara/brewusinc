@@ -1,11 +1,14 @@
 @import "sass/common.scss";
 
+$maxContentWidth: 960px;
+
 #services {
   h4 {
     font-size: 20px;
     font-family: "SourceHanSans-Medium";
     line-height: 30px;
     color: #221815;
+    position: relative;
 
     @include mq('sp') {
       font-size: 16px;
@@ -32,8 +35,6 @@
     display: block;
     width: 125px;
     height: 125px;
-    border-radius: 50%;
-    background-color: #f7f8f8;
 
     @include mq('sp') {
       width: 100px;
@@ -47,30 +48,32 @@
       right: 0;
       margin: 0 auto;
       content: "";
-      width: 75px;
-      height: 75px;
-      background-image: url($IMAGE_ROOT + '/services/strength-icon.png');
-      background-size: 75px;
+      width: 70px;
+      height: 74px;
+      background-image: url($IMAGE_ROOT + '/services/strength-icon_new.png');
+      background-size: 68px;
       background-repeat: no-repeat;
 
       @include mq('sp') {
         width: 60px;
-        height: 60px;
+        height: 62px;
         top: 20px;
-        background-image: url($IMAGE_ROOT + '/services/strength-icon_sp.png');
-        background-size: 60px;
+        background-image: url($IMAGE_ROOT + '/services/strength-icon_sp_new.png');
+        background-size: 54px;
       }
     }
 
     &--qcd {
       &::after {
-        background-position-y: 0;
+        background-position-y: 2px;
+        background-position-x: center;
       }
     }
 
     &--phase {
       &::after {
         background-position-y: -75px;
+        background-position-x: center;
         @include mq('sp') {
           background-position-y: -60px;
         }
@@ -80,8 +83,19 @@
     &--tech {
       &::after {
         background-position-y: -150px;
+        background-position-x: center;
         @include mq('sp') {
           background-position-y: -120px;
+        }
+      }
+    }
+
+    &--dx {
+      &::after {
+        background-position-y: -232px;
+        background-position-x: center;
+        @include mq('sp') {
+          background-position-y: -234px;
         }
       }
     }
@@ -89,6 +103,7 @@
     &--app {
       &::after {
         background-position-y: -225px;
+        background-position-x: center;
         @include mq('sp') {
           background-position-y: -180px;
         }
@@ -107,47 +122,108 @@
 
   .strength {
     &__desc {
+
       .strengthList {
+        margin: 0 auto;
         &__item {
+          width: 100%;
+          max-width: 1190px;
           display: flex;
-          margin-bottom: 100px;
+          margin: 70px 0 0 100px;
 
           @include mq('sp') {
             justify-content: center;
             flex-direction: column;
             margin-bottom: 50px;
+            max-width: 100%;
+            margin: 0 auto;
           }
 
           &:last-child {
             margin-bottom: 0;
           }
 
-          &__icon {
+          &__image {
+            width: 400px;
+            height: 300px;
+            flex-basis: 400px;
+            flex-grow: 0;
+            flex-shrink: 0;
+            
             @include mq('sp') {
-              .servicesIcon {
-                margin: 0 auto 40px;
-              }
+              width: 100%;
+              height: auto;
+              flex-basis: inherit;
+              flex-grow: inherit;
+              flex-shrink: inherit;
+            }
+            img {
+              width: 100%;
+              height: auto;
             }
           }
 
-          &__desc {
-            @include mq('pc') {
-              padding-left: 55px;
-            }
-
-            h4 {
-              margin-bottom: 30px;
-
-              @include mq('sp') {
-                text-align: center;
+          &__inner {
+            background-color: rgba(255, 255, 255, 0.9);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-blend-mode:lighten;
+            
+            &__up {
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              padding-left: 40px;
+              
+              h4 {
+                font-family: "SourceHanSans-Medium";
+                font-size: 50px;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.28;
+                letter-spacing: normal;
+                color: #040a17;
+                
+                span {
+                  font-size: 14px;
+                  font-weight: normal;
+                  font-stretch: normal;
+                  font-style: normal;
+                  line-height: 1.71;
+                  letter-spacing: 0.28px;
+                  color: #626262;
+                }
               }
+              
+              &__icon {
+                @include mq('sp') {
+                  .servicesIcon {
+                    margin: 0 auto 40px;
+                  }
+                }
+              }
+
             }
 
-            p {
-              text-align: left;
+            &__desc {
+              @include mq('pc') {
+                padding-left: 55px;
+              }
 
-              @include mq('sp') {
-                font-size: 14px;
+              h4 {
+                margin-bottom: 30px;
+
+                @include mq('sp') {
+                  text-align: center;
+                }
+              }
+
+              p {
+                text-align: left;
+
+                @include mq('sp') {
+                  font-size: 14px;
+                }
               }
             }
           }
@@ -167,15 +243,17 @@
       &__history {
         .recordListHead {
           display: flex;
+          justify-content: center;
 
           @include mq('sp') {
             flex-direction: column;
           }
 
           &__item {
-            width: 50%;
+            // width: 50%;
             padding: 0 16px;
             display: flex;
+            position: relative;
 
             @include mq('sp') {
               width: 100%;
@@ -187,12 +265,36 @@
               }
             }
 
-            &__desc {
-              width: 100%;
+            &__desc{
+              width: 330px;
+              height: 330px;
               margin-right: 32px;
+              background-color: #d8dfe7;
+              border-radius: 50%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              
+              h4 {
+                text-align: center;
+              }
 
               @include mq('sp') {
+                width: 280px;
+                height: 280px;
                 margin-right: 8px;
+              }
+
+              &__icon {
+                width: 24px;
+                height: 39px;
+                
+                img {
+                  width: 100%;
+                  height: auto;
+                  display: block;
+                }
               }
 
               p {
@@ -227,6 +329,37 @@
               }
             }
 
+            &__desc84 {
+              width: 330px;
+              height: 330px;
+              position: absolute;
+              border-radius: 50%;
+              background: #d8dfe7;
+              background-image: conic-gradient(#d8dfe7 0, #d8dfe7 84%, rgba(255, 255, 255, 0.3) 80%, rgba(255, 255, 255, 0.3) 100%);
+              // background-image: linear-gradient(to right, transparent 50%, rgba(255, 255, 255, 0.3) 0);
+              // transform: rotateZ(300deg);
+              top: 0;
+              left: 15px;
+              
+              // &:before {
+              //   content: '';
+              //   transform: rotate(.16turn);
+              //   display: block;
+              //   margin-left: 50%;
+              //   height: 100%;
+              //   border-radius: 0 100% 100% 0 / 50%;
+              //   background-color: inherit;
+              //   transform-origin: left;
+              // }
+              
+              @include mq('sp') {
+                width: 280px;
+                height: 280px;
+                margin-right: 8px;
+                left: 0;
+              }
+            }
+
             &__icon {
               width: 125px;
             }
@@ -236,20 +369,46 @@
         .recordList {
           display: flex;
           flex-wrap: wrap;
-          background-color: #f7f8f8;
-          margin-top: 30px;
+          width: 100%;
+          max-width: $maxContentWidth;
+          min-width: $maxContentWidth;
+          margin: 70px auto 0;
+          justify-content: space-between;
 
           @include mq('sp') {
             align-items: center;
+            max-width: 100%;
+            min-width: 100%;
           }
 
           &__item {
             display: flex;
-            width: 25%;
-            height: 60px;
+            background-color: #f7f8f8;
+            width: 300px;
+            height: 82px;
             padding: 0 20px;
             border: 0.5px solid #fff;
             align-items: center;
+            margin-right: 16px;
+            margin-bottom: 16px;
+            
+            &:nth-child(3n) {
+              margin-right: 0;
+            }
+            
+            &__icon {
+              width: 54px;
+              height: 54px;
+              background-color: #3d5f86;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              
+              img {
+                width: 27px;
+                height: 27px;
+              }
+            }
 
             @include mq('sp') {
               width: 50%;
@@ -262,6 +421,7 @@
               letter-spacing: 0.28px;
               color: colors(black);
               text-align: left;
+              margin-left: 12px;
               // line-height: 60px;
 
               @include mq('sp') {
@@ -279,7 +439,7 @@
               margin-left: auto;
 
               @include mq('pc') {
-                width: 32px;
+                width: 36px;
               }
 
 
@@ -300,15 +460,18 @@
       // 2020年3月...
       &__alert {
         margin-top: 10px;
+        width: 100%;
+        max-width: $maxContentWidth;
 
         @include mq('pc') {
-          margin-top: 20px;
-          padding: 0 20px;
+          margin: 20px auto 0;
+          max-width: 100%;
+          // padding: 0 15.7%;
         }
 
         p {
           color: #040a17;
-          text-align: right;
+          text-align: left;
           font-size: 12px;
           line-height: 25px;
 
@@ -319,10 +482,25 @@
       }
 
       &__client {
-        margin-top: 60px;
+        margin-top: 140px;
 
         @include mq('sp') {
           margin-top: 20px;
+        }
+
+        &__image {
+          width: 100%;
+          max-width: $maxContentWidth;
+          display: block;
+          margin: 0 auto;
+          
+          @include mq('sp') {
+            max-width: 100%;
+          }
+
+          img {
+            width: 100%;
+          }
         }
       }
     } // desc
@@ -396,6 +574,93 @@
 
       &::after {
         border-color: #f7f8f8 transparent transparent transparent;
+      }
+    }
+  }
+
+  .job {
+    &__desc {
+      width: 100%;
+      
+      ul {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: $maxContentWidth;
+        min-width: $maxContentWidth;
+        margin: 0 auto;
+        justify-content: flex-start;
+        
+        @include mq('sp') {
+          max-width: 100%;
+          min-width: 100%;
+        }
+
+        li {
+          width: 304px;
+          height: 200px;
+          box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+          background-color: #ffffff;
+          margin: 20px 24px 0 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 16px;
+
+          &:nth-child(3n) {
+            margin-right: 0;
+          }
+          @include mq('sp') {
+            // font-size: 10px;
+          }
+
+          h4 {
+            margin-top: 28px;
+          }
+
+          p {
+            margin-top: 28px;
+            font-size: 14px;
+            line-height: 1.71;
+            letter-spacing: 0.28px;
+            text-align: left;
+            color: #626262;
+          }
+        }
+      }
+    }
+  }
+
+  .tool {
+    ul {
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      max-width: $maxContentWidth;
+      min-width: $maxContentWidth;
+      margin: 0 auto;
+      justify-content: space-between;
+      
+      @include mq('sp') {
+        max-width: 100%;
+        min-width: 100%;
+        display: block;
+      }
+      
+      li {
+        width: 25%;
+        
+        @include mq('sp') {
+          width: 50%;
+        }
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
       }
     }
   }
@@ -589,6 +854,29 @@
           }
         }
       }
+    }
+  }
+}
+
+.aten {
+  font-size: 12px;
+  width: 100%;
+  max-width: 955px;
+  margin: 25px auto 0;
+  
+   @include mq('sp') {
+    max-width: 100%;
+  }
+  
+  > p {
+    color: #040a17;
+    line-height: 1;
+    text-align: left;
+    
+    > a {
+      color: #040a17;
+      display: block;
+      word-break: break-all;
     }
   }
 }

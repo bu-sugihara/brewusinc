@@ -60,7 +60,7 @@ html, body, div, a, span, input, header, footer, nav, ul, li, img, article, sect
 }
 
 .content {
-  margin-bottom: 150px;
+  margin-bottom: 200px;
 
   @include mq('sp') {
     margin-bottom: 100px;
@@ -92,6 +92,20 @@ html, body, div, a, span, input, header, footer, nav, ul, li, img, article, sect
     }
   }
 
+  &__innerNoMax {
+    width: 100%;
+    // width: $contentInner;
+    // padding: 0 20px;
+    margin: 0 auto;
+
+    @include mq('sp') {
+      // width: 100%;
+      // max-width: $contentInner;
+      // padding: 0 50px;
+      // padding: 0 5%;
+    }
+  }
+
   h2 {
     text-align: center;
     font-family: "Heebo-Bold";
@@ -109,6 +123,11 @@ html, body, div, a, span, input, header, footer, nav, ul, li, img, article, sect
     line-height: 50px;
     font-weight: normal;
     margin-bottom: 60px;
+    margin-left: 15.7%;
+    
+    @include mq('sp') {
+      margin-left: 5%;
+    }
   }
 
   p {
@@ -152,10 +171,10 @@ html, body, div, a, span, input, header, footer, nav, ul, li, img, article, sect
     justify-content: flex-start;
 
     > nav {
-      max-width: $contentInner;
+      // max-width: $contentInner;
       margin: 0 auto;
       flex-grow: 1;
-      padding: 0 20px;
+      padding: 0 15.7%;
 
       @include mq('sp') {
         // padding: 0 50px;
@@ -233,7 +252,7 @@ html, body, div, a, span, input, header, footer, nav, ul, li, img, article, sect
     }
 
     &__title {
-      width: 700px;
+      width: 50%; // 700px
       height: 300px;
       display: flex;
       align-items: center;
@@ -245,7 +264,7 @@ html, body, div, a, span, input, header, footer, nav, ul, li, img, article, sect
       }
 
       > h2 {
-        margin-left: 10%;
+        margin-left: 30.7%;
         margin-bottom: 0;
         font-size: 60px;
 
