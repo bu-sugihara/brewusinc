@@ -42,6 +42,10 @@ yarn build
 使用しているテキストの抽出（必ずbuild後に実行してください。）
 ```
 rm -rf subset-jp.txt && find ./public -name "*.html" | xargs grep -dskip -o -h -e "[ぁ-んァ-ヶ亜-熙 0-9 a-z A-Z]" | sort | uniq > ./subset-jp.txt
+
+windowsは以下で抽出してください
+rm -rf subset-jp.txt && find ./docs -name "*.html" | xargs grep -dskip -o -h -e "[ぁ-ん ァ-ヶ 一-龠 〃々〆〇 0-9 a-z A-Z]" | sort | uniq > ./subset-jp.txt
+
 ```
   - サブセットフォントメーカーを使ってください。（インストールは[こちら](https://opentype.jp/subsetfontmk.htm)）
     - 加工前の元データは`src/assets/fonts/*`にあります。
