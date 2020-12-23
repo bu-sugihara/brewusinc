@@ -55,11 +55,11 @@ $maxContentWidth: 960px;
       background-repeat: no-repeat;
 
       @include mq('sp') {
-        width: 60px;
-        height: 62px;
-        top: 20px;
+        width: 80px;
+        height: 88px;
+        top: 5px;
         background-image: url($IMAGE_ROOT + '/services/strength-icon_sp_new.png');
-        background-size: 54px;
+        background-size: 80px;
       }
     }
 
@@ -75,7 +75,7 @@ $maxContentWidth: 960px;
         background-position-y: -75px;
         background-position-x: center;
         @include mq('sp') {
-          background-position-y: -60px;
+          background-position-y: -84px;
         }
       }
     }
@@ -85,7 +85,7 @@ $maxContentWidth: 960px;
         background-position-y: -150px;
         background-position-x: center;
         @include mq('sp') {
-          background-position-y: -120px;
+          background-position-y: -170px;
         }
       }
     }
@@ -95,7 +95,7 @@ $maxContentWidth: 960px;
         background-position-y: -232px;
         background-position-x: center;
         @include mq('sp') {
-          background-position-y: -234px;
+          background-position-y: -260px;
         }
       }
     }
@@ -136,7 +136,7 @@ $maxContentWidth: 960px;
             flex-direction: column;
             margin-bottom: 50px;
             max-width: 100%;
-            margin: 0 auto;
+            margin: 70px auto 0;
           }
 
           &:last-child {
@@ -198,7 +198,7 @@ $maxContentWidth: 960px;
               &__icon {
                 @include mq('sp') {
                   .servicesIcon {
-                    margin: 0 auto 40px;
+                    // margin: 0 auto 40px;
                   }
                 }
               }
@@ -210,11 +210,15 @@ $maxContentWidth: 960px;
                 padding-left: 55px;
               }
 
+              @include mq('sp') {
+                padding: 0 24px;
+              }
+
               h4 {
                 margin-bottom: 30px;
 
                 @include mq('sp') {
-                  text-align: center;
+                  text-align: left;
                 }
               }
 
@@ -259,6 +263,8 @@ $maxContentWidth: 960px;
               width: 100%;
               margin: 0 auto;
               padding: 0;
+              display: flex;
+              justify-content: center;
 
               &:first-of-type {
                 margin-bottom: 30px;
@@ -283,7 +289,7 @@ $maxContentWidth: 960px;
               @include mq('sp') {
                 width: 280px;
                 height: 280px;
-                margin-right: 8px;
+                margin-right: 0px;
               }
 
               &__icon {
@@ -355,8 +361,10 @@ $maxContentWidth: 960px;
               @include mq('sp') {
                 width: 280px;
                 height: 280px;
-                margin-right: 8px;
+                margin-right: 0px;
                 left: 0;
+                right: 0;
+                margin: auto;
               }
             }
 
@@ -379,6 +387,7 @@ $maxContentWidth: 960px;
             align-items: center;
             max-width: 100%;
             min-width: 100%;
+            padding: 0 24px;
           }
 
           &__item {
@@ -404,16 +413,35 @@ $maxContentWidth: 960px;
               justify-content: center;
               align-items: center;
               
+              @include mq('sp') {
+                width: 32px;
+                height: 32px;
+                flex-basis: 32px;
+                flex-grow: 0;
+                flex-shrink: 0;
+                margin-top: 12px;
+              }
+
               img {
                 width: 27px;
                 height: 27px;
+                
+                @include mq('sp') {
+                  width: 16px;
+                  height: 16px;
+                }
               }
             }
 
             @include mq('sp') {
-              width: 50%;
-              height: 32px;
+              width: 49%;
+              height: 88px;
               padding: 0 8px;
+              margin-right: 0px;
+              margin-top: 10px;
+              margin-bottom: 0px;
+              position: relative;
+              align-items: flex-start;
             }
 
             p {
@@ -425,8 +453,10 @@ $maxContentWidth: 960px;
               // line-height: 60px;
 
               @include mq('sp') {
-                font-size: 10px!important;
+                font-size: 16px!important;
                 letter-spacing: 0.2px;
+                margin-top: 12px;
+                line-height: 1.2;
                 // line-height: 32px;
               }
             }
@@ -444,7 +474,10 @@ $maxContentWidth: 960px;
 
 
               @include mq('sp') {
-                font-size: 10px;
+                font-size: 18px;
+                position: absolute;
+                bottom: 12px;
+                right: 12px;
                 // line-height: 32px;
               }
             }
@@ -465,8 +498,12 @@ $maxContentWidth: 960px;
 
         @include mq('pc') {
           margin: 20px auto 0;
-          max-width: 100%;
           // padding: 0 15.7%;
+        }
+
+        @include mq('sp') {
+          max-width: 100%;
+          padding: 0 24px;
         }
 
         p {
@@ -496,6 +533,7 @@ $maxContentWidth: 960px;
           
           @include mq('sp') {
             max-width: 100%;
+            padding: 0 24px;
           }
 
           img {
@@ -611,9 +649,13 @@ $maxContentWidth: 960px;
 
           &:nth-child(3n) {
             margin-right: 0;
+            
+            @include mq('sp') {
+              margin-right: inherit;
+            }
           }
           @include mq('sp') {
-            // font-size: 10px;
+            margin: 20px auto 0;
           }
 
           h4 {
@@ -647,7 +689,7 @@ $maxContentWidth: 960px;
       @include mq('sp') {
         max-width: 100%;
         min-width: 100%;
-        display: block;
+        padding: 0 24px;
       }
       
       li {
@@ -668,6 +710,16 @@ $maxContentWidth: 960px;
   .process {
     &__desc {
       display: flex;
+      width: 100%;
+      max-width: $maxContentWidth;
+      min-width: $maxContentWidth;
+      margin: 0 auto;
+      
+      @include mq('sp') {
+        max-width: 100%;
+        min-width: 100%;
+        padding: 0 24px;
+      }
 
       .processList {
         margin-right: 60px;
@@ -715,12 +767,15 @@ $maxContentWidth: 960px;
             > span {
               font-size: 20px;
               letter-spacing: 1px;
-              color: #040a17;
+              color: #fff;
+              padding: 8px 12px;
               font-family: "Heebo-Bold";
               margin-right: 16px;
+              background-color: #40648c;
+              border-radius: 26px;
 
               @include mq('sp') {
-                display: block;
+                // display: block;
                 font-size: 16px;
               }
             }
@@ -866,6 +921,7 @@ $maxContentWidth: 960px;
   
    @include mq('sp') {
     max-width: 100%;
+    padding: 0 24px;
   }
   
   > p {

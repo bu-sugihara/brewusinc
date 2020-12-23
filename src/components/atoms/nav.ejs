@@ -18,10 +18,10 @@
       <% } %>
         <span>
           <%= item.label %>
-          <% if (item.jp != '') { %>
-          <i>
-            <%= item.jp %>
-          </i>
+          <% if (item.jp != '' && item.jp != undefined) { %>
+            <i>
+              <%= item.jp %>
+            </i>
           <% } %>
         </span>
       </a>
