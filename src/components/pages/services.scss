@@ -129,7 +129,7 @@ $maxContentWidth: 960px;
           width: 100%;
           max-width: 1190px;
           display: flex;
-          margin: 70px 0 0 100px;
+          margin: 70px auto 0;
 
           @include mq('sp') {
             justify-content: center;
