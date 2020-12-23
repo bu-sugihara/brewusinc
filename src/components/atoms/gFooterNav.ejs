@@ -1,9 +1,9 @@
 <%
 const navList = [
-  { id: '', label: 'Services', href: process.env.NODE_ENV == 'development' ? ROOT + '/services.html' : ROOT + '/services', type: 'nav' },
-  { id: 'developer', label: 'Developer', href: ROOT + '/#developer', type: 'nav' },
-  { id: '', label: 'Company', href: process.env.NODE_ENV == 'development' ? ROOT + '/company.html' : ROOT + '/company', type: 'nav' },
-  { id: '', label: 'Privacy policy', href: process.env.NODE_ENV == 'development' ? ROOT + '/privacypolicy.html' : ROOT + '/privacypolicy', type: 'nav' },
+  { id: '', label: 'Services', href: process.env.NODE_ENV == 'development' ? ROOT + '/services.html' : ROOT + '/services', type: 'nav', gType: 'footer' },
+  { id: 'developer', label: 'Developer', href: ROOT + '/#developer', type: 'nav', gType: 'footer' },
+  { id: '', label: 'Company', href: process.env.NODE_ENV == 'development' ? ROOT + '/company.html' : ROOT + '/company', type: 'nav', gType: 'footer' },
+  { id: '', label: 'Privacy policy', href: process.env.NODE_ENV == 'development' ? ROOT + '/privacypolicy.html' : ROOT + '/privacypolicy', type: 'nav', gType: 'footer' },
 ];
 const navClassname = 'nav';
 %>

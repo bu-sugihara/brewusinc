@@ -186,4 +186,15 @@ export const init = () => {
       }
     }
   })
+
+  if (Const.IS_SP) {
+    // スマホのメニューの日本語は取る
+    let navItems = document.getElementsByClassName('nav__item')
+    for (var i = 0; i < navItems.length; i++) {
+      let val = navItems[i].getElementsByTagName('i')[0]
+      if (typeof val !== 'undefined') {
+        val.remove()
+      }
+    }
+  }
 }

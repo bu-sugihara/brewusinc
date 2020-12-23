@@ -63,7 +63,7 @@
       }
 
       a:not(.btn) {
-        span {
+        span, span.footerSpan {
           &::before {
             content: "";
             position: absolute;
@@ -79,6 +79,28 @@
 
           &:hover {
             color: #38567f;
+
+            &::before {
+              // transform-origin: left top;
+              transform: scale(1,1)
+            }
+          }
+        }
+
+        span.footerSpan {
+          &::before {
+            content: "";
+            position: absolute;
+            width: 60%;
+            height: 2px;
+            bottom: 28px;
+            left: 20%;
+            background-color: transparent;
+            transform: scale(0);
+          }
+
+          &:hover {
+            color: #d4d4d4;
 
             &::before {
               // transform-origin: left top;

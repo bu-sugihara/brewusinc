@@ -1,7 +1,9 @@
+
 <ul class="<%= navClassname %>">
   <%
     for (var i = 0; i < navList.length; i++) {
     const item = navList[i]
+    const footerSpan = item.gType == 'footer' ? 'footerSpan' : ''
   %>
     <li class="nav__item" data-target-id="<%= item.id %>">
       <% // contactのみ計測
@@ -16,7 +18,7 @@
       <%  } else { %>
         <a href="<%= item.href %>">
       <% } %>
-        <span>
+        <span class="<%= footerSpan %>">
           <%= item.label %>
           <% if (item.jp != '' && item.jp != undefined) { %>
             <i>
