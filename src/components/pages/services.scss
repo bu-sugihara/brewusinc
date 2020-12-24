@@ -207,7 +207,7 @@ $maxContentWidth: 960px;
 
             &__desc {
               @include mq('pc') {
-                padding-left: 55px;
+                padding: 0 55px;
               }
 
               @include mq('sp') {
@@ -735,7 +735,7 @@ $maxContentWidth: 960px;
           margin-top: 32px;
 
           @include mq('sp') {
-            height: 200px;
+            height: 250px;
           }
 
           &:first-of-type {
@@ -743,7 +743,7 @@ $maxContentWidth: 960px;
             margin-top: 0;
 
             @include mq('sp') {
-              height: 200px;
+              height: 250px !important;
             }
           }
 
@@ -762,13 +762,15 @@ $maxContentWidth: 960px;
               line-height: normal;
               font-size: 16px;
               margin-bottom: 20px;
+              display: flex;
+              align-items: baseline;
             }
 
             > span {
               font-size: 20px;
               letter-spacing: 1px;
               color: #fff;
-              padding: 8px 12px;
+              padding: 5px 12px;
               font-family: "Heebo-Bold";
               margin-right: 16px;
               background-color: #40648c;
@@ -777,6 +779,7 @@ $maxContentWidth: 960px;
               @include mq('sp') {
                 // display: block;
                 font-size: 16px;
+                margin-bottom: 20px;
               }
             }
           }
