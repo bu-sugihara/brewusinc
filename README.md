@@ -48,7 +48,8 @@ rm -rf subset-jp.txt && find ./docs -name "*.html" | xargs grep -dskip -o -h -e 
 
 ```
   - サブセットフォントメーカーを使ってください。（インストールは[こちら](https://opentype.jp/subsetfontmk.htm)）
-    - 加工前の元データは`src/assets/fonts/*`にあります。
+    - 加工前の元データは`src/assets/fonts/Former`にあります。
+    - 加工後、抽出データは`src/assets/fonts/`にあります。こちらを使用しています。
 
 ### 本番反映
 masterブランチに`docs`配下のファイルをpushすれば反映されます。
