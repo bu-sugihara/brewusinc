@@ -22,7 +22,7 @@ function init() {
   EventDispatcher.on('work__content__ex__btn', (e) => {
     e.stopPropagation()
 
-    const elm = document.getElementsByClassName('developer')[0]
+    const elm = document.getElementsByClassName('works')[0]
 
     if (elm.classList.contains('showAll')) {
       e.target.innerHTML = '<span>View More</span>'
